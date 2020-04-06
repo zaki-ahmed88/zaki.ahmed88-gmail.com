@@ -1,0 +1,44 @@
+
+
+
+<table>
+    <tr>
+        <td>Enter Your Id</td>
+        <td><input [(ngModel)]="employee.id" type="text"></td>
+    </tr>
+    <tr>
+        <td>Enter Your Name</td>
+        <td><input [(ngModel)]="employee.name" type="text"></td>
+    </tr>
+    <tr>
+        <td>Enter Your Mail</td>
+        <td><input [(ngModel)]="employee.mail" type="text"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><button (click)="addEmployee()" class="btn btn-primary">Submit</button></td>
+        
+    </tr>
+</table>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let emp of employees'>
+            <th scope="row">1</th>
+            <td>{{emp.id}}</td>
+            <td>{{emp.name}}</td>
+            <td>{{emp.mail}}</td>
+            <td><button (click)="deleteEmployee($event)" class="btn btn-primary">Delete</button></td>
+        </tr>
+    </tbody>
+</table>
+
